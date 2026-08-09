@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>實驗室成員｜SOSELab</title>
+    <meta content="SOSELab 在學成員、畢業生與歷年合照" name="description" />
+    <meta content="#004f7c" name="theme-color" />
+    <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/css/site.css" rel="stylesheet" />
+    <link href="en/people.html" hreflang="en" rel="alternate" />
+
+    <style>
+        /* Current members: keep the regular master's group visually dominant. */
+        .current-member-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr) minmax(220px, 1fr);
+            gap: 1.25rem;
+            align-items: stretch;
+        }
+
+        .current-member-grid .card {
+            min-width: 0;
+            height: 100%;
+        }
+
+        .current-member-grid .regular-master-card {
+            padding-right: 1.5rem;
+        }
+
+        .current-member-grid .members-current {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .55rem;
+        }
+
+        /* Alumni toolbar: vertically center the icon, input, label and select. */
+        .alumni-toolbar {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .alumni-toolbar .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-width: 0;
+            height: 48px;
+            margin: 0;
+        }
+
+        .alumni-toolbar .search-box>svg {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .alumni-toolbar .search-box input[type="search"] {
+            width: 100%;
+            height: 48px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 16px 0 44px;
+            line-height: 1.2;
+        }
+
+        .alumni-toolbar .sort-control {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .alumni-toolbar .sort-control label {
+            margin: 0;
+            line-height: 48px;
+        }
+
+        .alumni-toolbar .filter-select {
+            height: 48px;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .current-member-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .current-member-grid .regular-master-card {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 680px) {
+
+            .current-member-grid,
+            .alumni-toolbar {
+                grid-template-columns: 1fr;
+            }
+
+            .current-member-grid .regular-master-card {
+                grid-column: auto;
+            }
+
+            .alumni-toolbar .sort-control {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <a class="skip-link" href="#main">跳至主要內容</a>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a aria-label="SOSELab 首頁" class="brand" href="index.html">
+                <span class="brand-mark"><span>S</span></span>
+                <span><strong>SOSELab</strong><small>Service-Oriented Software Engineering Lab · NTOU</small></span>
+            </a>
+            <nav aria-label="主要導覽" class="desktop-nav"><a class="nav-link" href="index.html">首頁</a><a class="nav-link"
+                    href="director.html">主持人</a><a class="nav-link" href="publications.html">研究成果</a><a
+                    class="nav-link active" href="people.html">實驗室成員</a><a class="nav-link"
+                    href="projects.html">大學專題</a><a class="nav-link" href="resources.html">研究資源</a></nav>
+            <div class="header-actions"><a aria-label="Switch to English" class="lang-switch" href="en/people.html"
+                    lang="en">EN</a>
+                <button aria-label="切換深色模式" class="icon-btn" data-theme-toggle=""><svg aria-hidden="true" class="icon"
+                        fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" width="22">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                    </svg></button>
+                <button aria-expanded="false" aria-label="開啟選單" class="icon-btn mobile-menu-btn"
+                    data-menu-toggle=""><svg aria-hidden="true" class="icon" fill="none" height="22"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        viewbox="0 0 24 24" width="22">
+                        <path d="M4 7h16M4 12h16M4 17h16"></path>
+                    </svg></button>
+            </div>
+        </div>
+        <nav aria-label="行動版導覽" class="mobile-nav" data-mobile-nav=""><a class="nav-link" href="index.html">首頁</a><a
+                class="nav-link" href="director.html">主持人</a><a class="nav-link" href="publications.html">研究成果</a><a
+                class="nav-link active" href="people.html">實驗室成員</a><a class="nav-link" href="projects.html">大學專題</a><a
+                class="nav-link" href="resources.html">研究資源</a></nav>
+    </header>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumbs"><a href="index.html">首頁</a><svg aria-hidden="true" class="icon" fill="none"
+                        height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" width="14">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg><span>實驗室成員</span></div>
+                <div class="kicker">People</div>
+                <h1 class="page-title">實驗室成員</h1>
+            </div>
+        </section>
+        <section class="section compact">
+            <div class="container">
+                <div class="current-member-grid">
+                    <div class="card regular-master-card">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg></div>
+                        <h3>碩士班一般生</h3>
+                        <div class="members-current">
+                            <span class="member-chip">吳乃元</span>
+                            <span class="member-chip">李安喻</span>
+                            <span class="member-chip">張聿捷</span>
+                            <span class="member-chip">朱芷萱</span>
+                            <span class="member-chip">丘祐華</span>
+                            <span class="member-chip">趙宇瑄</span>
+                            <span class="member-chip">李孟修</span>
+                            <span class="member-chip">陳高陸</span>
+                            <span class="member-chip">王書姵</span>
+                            <span class="member-chip">周耘</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <path d="M4 19a2 2 0 0 1 2-2h14V4H6a2 2 0 0 0-2 2v13Z"></path>
+                                <path d="M6 17h14v4H6a2 2 0 0 1 0-4Z"></path>
+                            </svg></div>
+                        <h3>碩士在職班</h3>
+                        <div class="members-current">
+                            <span class="member-chip">黃祥</span>
+                            <span class="member-chip">黃莉庭</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="M8.5 12 7 22l5-3 5 3-1.5-10"></path>
+                            </svg></div>
+                        <h3>博士班</h3>
+                        <div class="members-current">
+                            <span class="member-chip">李昀陞</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Alumni</div>
+                        <h2>碩士班畢業學生</h2>
+                    </div>
+                    <p>可依姓名、論文題目或年份搜尋。</p>
+                </div>
+                <div class="toolbar alumni-toolbar">
+                    <div class="search-box"><svg aria-hidden="true" class="icon" fill="none" height="19"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            viewbox="0 0 24 24" width="19">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="m20 20-4-4"></path>
+                        </svg><input data-search="" placeholder="搜尋姓名或論文題目…" type="search" /></div>
+                    <div class="sort-control"><label for="alumni-records-sort">排序：</label><select class="filter-select"
+                            data-sort-control="" data-sort-target="#alumni-records" id="alumni-records-sort">
+                            <option value="asc">從舊到新</option>
+                            <option value="desc" selected="selected">從新到舊</option>
+                        </select></div>
+                </div>
+                <div class="list-stack" data-sort-container="" id="alumni-records">
+                    <article class="list-item" data-category="graduate" data-order="1" data-search-item=""
+                        data-sort-item=""><span class="list-index">1</span>
+                        <div>
+                            <h3>童致品｜運用基因演算法達成服務組合最佳化</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2010年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="2" data-search-item=""
+                        data-sort-item=""><span class="list-index">2</span>
+                        <div>
+                            <h3>李佳學｜綜合知識本體推論與詞彙分析技術之網際服務探索機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2011年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="3" data-search-item=""
+                        data-sort-item=""><span class="list-index">3</span>
+                        <div>
+                            <h3>陳瀅至｜結合資料探勘技術之適地性行動服務遞送機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2011年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="4" data-search-item=""
+                        data-sort-item=""><span class="list-index">4</span>
+                        <div>
+                            <h3>施又維｜以 REST 架構為基礎之服務混搭流程與框架</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2011年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="7" data-search-item=""
+                        data-sort-item=""><span class="list-index">7</span>
+                        <div>
+                            <h3>陳建璋｜具推薦功能的服務混搭系統之設計與實作</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2012年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="6" data-search-item=""
+                        data-sort-item=""><span class="list-index">6</span>
+                        <div>
+                            <h3>馬治群｜以商務規則為基礎之語意化網際服務搜尋方法研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2012年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="5" data-search-item=""
+                        data-sort-item=""><span class="list-index">5</span>
+                        <div>
+                            <h3>葉清隆｜結合風險評估與追蹤技術之服務組合管理機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2012年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="10" data-search-item=""
+                        data-sort-item=""><span class="list-index">10</span>
+                        <div>
+                            <h3>江政勳｜適用於智慧型手機的服務微件組合框架之設計與實作</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2013年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="9" data-search-item=""
+                        data-sort-item=""><span class="list-index">9</span>
+                        <div>
+                            <h3>蔡燿宇｜以統一塑模語言為基礎之服務元件探索方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2013年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="8" data-search-item=""
+                        data-sort-item=""><span class="list-index">8</span>
+                        <div>
+                            <h3>顏端儀｜結合社群網絡之網際服務搜尋與推薦機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2013年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="11" data-search-item=""
+                        data-sort-item=""><span class="list-index">11</span>
+                        <div>
+                            <h3>林璟鴻｜以標籤與服務品質為基礎之行動應用程式搜尋與管理系統</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2014年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="12" data-search-item=""
+                        data-sort-item=""><span class="list-index">12</span>
+                        <div>
+                            <h3>陳炳璋｜適用於行動裝置之高可用性服務遞送框架之設計與實作</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2014年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="14" data-search-item=""
+                        data-sort-item=""><span class="list-index">14</span>
+                        <div>
+                            <h3>陳盈臻｜測試驅動之 RESTful 服務探索機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2015年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="13" data-search-item=""
+                        data-sort-item=""><span class="list-index">13</span>
+                        <div>
+                            <h3>馬楊陞｜以狀態驅動並以微件為基礎的行動服務組合機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2015年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="16" data-search-item=""
+                        data-sort-item=""><span class="list-index">16</span>
+                        <div>
+                            <h3>林睿祥｜服務品質感知與語意化行動應用程式推薦方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2016年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="15" data-search-item=""
+                        data-sort-item=""><span class="list-index">15</span>
+                        <div>
+                            <h3>李啟嘉｜支援服務快取功能之行動應用元件架構</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2016年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="20" data-search-item=""
+                        data-sort-item=""><span class="list-index">20</span>
+                        <div>
+                            <h3>呂致緯｜基於自動編碼器之開放資料集查詢與視覺化機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2017年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="21" data-search-item=""
+                        data-sort-item=""><span class="list-index">21</span>
+                        <div>
+                            <h3>范振原｜基於服務相依圖之微服務測試機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2017年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="17" data-search-item=""
+                        data-sort-item=""><span class="list-index">17</span>
+                        <div>
+                            <h3>陳鵬中｜鏈結開放資料之建立、查詢與服務生成機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2017年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="18" data-search-item=""
+                        data-sort-item=""><span class="list-index">18</span>
+                        <div>
+                            <h3>何靖霆｜基於流程引擎之對話機器人框架</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2017年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="19" data-search-item=""
+                        data-sort-item=""><span class="list-index">19</span>
+                        <div>
+                            <h3>林軒如｜使用語意標註和圖資料庫並基於工作流程之 RESTful 服務組合機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2017年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="24" data-search-item=""
+                        data-sort-item=""><span class="list-index">24</span>
+                        <div>
+                            <h3>潘天允｜運用機器學習方法達成 Web API 分類與檢索</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2018年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="23" data-search-item=""
+                        data-sort-item=""><span class="list-index">23</span>
+                        <div>
+                            <h3>王家潁｜適用於電子商務網站建置之價格驅動服務推薦機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2018年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="22" data-search-item=""
+                        data-sort-item=""><span class="list-index">22</span>
+                        <div>
+                            <h3>莊晏｜基於需求腳本之微服務搜尋機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2018年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="26" data-search-item=""
+                        data-sort-item=""><span class="list-index">26</span>
+                        <div>
+                            <h3>劉邑修｜基於版本的微服務分析、監控與視覺化方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2019年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="25" data-search-item=""
+                        data-sort-item=""><span class="list-index">25</span>
+                        <div>
+                            <h3>許銘仁｜Web API 範例程式碼擷取與關聯 Web API 推薦方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2019年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="27" data-search-item=""
+                        data-sort-item=""><span class="list-index">27</span>
+                        <div>
+                            <h3>戴碩宏｜基於 Node-RED 並支援 IoT 裝置之對話機器人平台</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2019年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="28" data-search-item=""
+                        data-sort-item=""><span class="list-index">28</span>
+                        <div>
+                            <h3>林俊廷｜輔助微服務應用系統開發與維運之對話機器人框架</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2020年1月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="31" data-search-item=""
+                        data-sort-item=""><span class="list-index">31</span>
+                        <div>
+                            <h3>張家維｜支援行為驅動開發方法與 API 調用分析之網頁自動化測試系統</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2020年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="29" data-search-item=""
+                        data-sort-item=""><span class="list-index">29</span>
+                        <div>
+                            <h3>陳俊佑｜微服務契約測試與監控之視覺化方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2020年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="30" data-search-item=""
+                        data-sort-item=""><span class="list-index">30</span>
+                        <div>
+                            <h3>李佳育｜基於絞殺榕模式之微服務遷移方法研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2020年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="33" data-search-item=""
+                        data-sort-item=""><span class="list-index">33</span>
+                        <div>
+                            <h3>游婉琳｜基於 Web API 之半自動化對話機器人生成機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2021年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="32" data-search-item=""
+                        data-sort-item=""><span class="list-index">32</span>
+                        <div>
+                            <h3>陳筱蓉｜協同式 Web API 安全屬性標記與線上測試機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2021年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="34" data-search-item=""
+                        data-sort-item=""><span class="list-index">34</span>
+                        <div>
+                            <h3>陸宗文｜基於資料庫存取分析之微服務遷移方法研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2021年8月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="38" data-search-item=""
+                        data-sort-item=""><span class="list-index">38</span>
+                        <div>
+                            <h3>楊育湧｜事件驅動微服務架構遷移與測試方法研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2022年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="37" data-search-item=""
+                        data-sort-item=""><span class="list-index">37</span>
+                        <div>
+                            <h3>黃郁文｜支援微服務與維運之可擴充對話機器人平台設計與實作</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2022年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="36" data-search-item=""
+                        data-sort-item=""><span class="list-index">36</span>
+                        <div>
+                            <h3>吳朱飛｜事件驅動微服務系統之契約測試及端到端測試方法研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2022年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="35" data-search-item=""
+                        data-sort-item=""><span class="list-index">35</span>
+                        <div>
+                            <h3>王宇德｜基於 Kubernetes 與 Istio 之微服務架構系統視覺化分析與監控機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2022年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="41" data-search-item=""
+                        data-sort-item=""><span class="list-index">41</span>
+                        <div>
+                            <h3>張玉筠｜Web API 行為驅動測試自動化之研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2023年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="40" data-search-item=""
+                        data-sort-item=""><span class="list-index">40</span>
+                        <div>
+                            <h3>陳俞安｜於網站前端實施半自動化行為驅動測試之研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2023年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="39" data-search-item=""
+                        data-sort-item=""><span class="list-index">39</span>
+                        <div>
+                            <h3>王聖凱｜基於大型語言模型的微服務開發與維運之對話式輔助工具</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2023年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="42" data-search-item=""
+                        data-sort-item=""><span class="list-index">42</span>
+                        <div>
+                            <h3>陳宏逸｜大學教學實務問答機器人之設計與實作</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年1月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="47" data-search-item=""
+                        data-sort-item=""><span class="list-index">47</span>
+                        <div>
+                            <h3>謝知祐｜基於原始碼詞向量與資料存取分析之微服務識別方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="46" data-search-item=""
+                        data-sort-item=""><span class="list-index">46</span>
+                        <div>
+                            <h3>郭一杰｜基於前端行為驅動測試的半自動化 Web API 測試案例生成方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="45" data-search-item=""
+                        data-sort-item=""><span class="list-index">45</span>
+                        <div>
+                            <h3>葉航葦｜事件驅動微服務架構遷移之半自動化契約測試案例建置方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="44" data-search-item=""
+                        data-sort-item=""><span class="list-index">44</span>
+                        <div>
+                            <h3>邵安祺｜基於多資料整合與資訊檢索技術的程式設計問答機器人</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="43" data-search-item=""
+                        data-sort-item=""><span class="list-index">43</span>
+                        <div>
+                            <h3>梁晏慈｜基於模式的 Web 資訊系統之對話機器人介面建置方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2024年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="48" data-search-item=""
+                        data-sort-item=""><span class="list-index">48</span>
+                        <div>
+                            <h3>洪唯真｜傳統軟體專案之重構、模組化與微服務化之研究：以金融服務系統為例</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年5月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="49" data-search-item=""
+                        data-sort-item=""><span class="list-index">49</span>
+                        <div>
+                            <h3>賴岳均｜事件驅動Kubernetes微服務相依性監控與分析研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年5月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="54" data-search-item=""
+                        data-sort-item=""><span class="list-index">54</span>
+                        <div>
+                            <h3>彭心睿｜運用生成式 AI 與使用者行為腳本之 Web API 測試案例自動生成方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="53" data-search-item=""
+                        data-sort-item=""><span class="list-index">53</span>
+                        <div>
+                            <h3>黃子毓｜運用原始碼重構工具與大語言模型之 Spring Boot 微服務遷移方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="52" data-search-item=""
+                        data-sort-item=""><span class="list-index">52</span>
+                        <div>
+                            <h3>林維凱｜基於 Kubernetes 之微服務架構版本視覺化分析與負載模擬機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="51" data-search-item=""
+                        data-sort-item=""><span class="list-index">51</span>
+                        <div>
+                            <h3>賴冠宏｜基於 ChatOps 之微服務部署管線自動生成與監控機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="50" data-search-item=""
+                        data-sort-item=""><span class="list-index">50</span>
+                        <div>
+                            <h3>趙晨皓｜基於 ChatOps 之微服務品質分析與評估回饋機制</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="55" data-search-item=""
+                        data-sort-item=""><span class="list-index">55</span>
+                        <div>
+                            <h3>沈君豪｜基於機器學習的 Kubernetes 微服務系統延遲預測研究</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2025年10月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="59" data-search-item=""
+                        data-sort-item=""><span class="list-index">59</span>
+                        <div>
+                            <h3>陳柏豪｜大型語言模型輔助之PHP_Web應用程式至Python_FastAPI框架的自動遷移方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2026年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="58" data-search-item=""
+                        data-sort-item=""><span class="list-index">58</span>
+                        <div>
+                            <h3>陳逸｜基於測試驅動開發與大型語言模型之單體至微服務架構遷移方法</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2026年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="57" data-search-item=""
+                        data-sort-item=""><span class="list-index">57</span>
+                        <div>
+                            <h3>林珊銥｜基於大型語言模型之軟體工程教學輔助對話機器人設計</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2026年7月</span>
+                    </article>
+                    <article class="list-item" data-category="graduate" data-order="56" data-search-item=""
+                        data-sort-item=""><span class="list-index">56</span>
+                        <div>
+                            <h3>林芷穎｜支援知識圖譜與正確性查核機制之檢索擴增生成框架設計</h3>
+                            <div class="list-meta">碩士論文</div>
+                        </div><span class="pill">2026年7月</span>
+                    </article>
+
+                </div>
+                <div class="empty-state" data-empty="">找不到符合條件的成員。</div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Gallery</div>
+                        <h2>實驗室照片集</h2>
+                    </div>
+                    <p>收錄歷年實驗室合照與活動照片，並加入 2017、2018、2019 年照片區塊。</p>
+                </div>
+                <div class="gallery">
+                    <figure><img alt="SOSELab 2026 實驗室合照" loading="lazy" src="assets/images/soselab-2026.jpg" />
+                        <figcaption>2025 SOSELab 合照</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 參與 AsianPLoP 2026 研討會合照" loading="lazy"
+                            src="assets/images/soselab-2026-asianplop.jpg" />
+                        <figcaption>AsianPLoP 2026</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2025 實驗室合照" loading="lazy" src="assets/images/soselab-2025.jpg" />
+                        <figcaption>2025 SOSELab 合照</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 參與 AROB 30th 2025 研討會合照" loading="lazy"
+                            src="assets/images/soselab-2025-arob.jpeg" />
+                        <figcaption>AROB 30th 2025</figcaption>
+                    </figure>
+
+                    <figure><img alt="SOSELab 2023 合照" loading="lazy" src="assets/images/soselab-2023.png" />
+                        <figcaption>2023 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2022 合照" loading="lazy" src="assets/images/soselab-2022.jpg" />
+                        <figcaption>2022 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2021 合照" loading="lazy" src="assets/images/soselab-2021.jpg" />
+                        <figcaption>2021 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2020 合照" loading="lazy" src="assets/images/soselab-2020.jpg" />
+                        <figcaption>2020 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2019 合照" loading="lazy" src="assets/images/soselab-2019.jpg" />
+                        <figcaption>2019 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2018 合照" loading="lazy" src="assets/images/soselab-2018.jpg" />
+                        <figcaption>2018 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2017 合照" loading="lazy" src="assets/images/soselab-2017.jpg" />
+                        <figcaption>2017 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2015 合照" loading="lazy" src="assets/images/soselab-2015.jpg" />
+                        <figcaption>2015 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2014 合照" loading="lazy" src="assets/images/soselab-2014.jpg" />
+                        <figcaption>2014 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2013 合照" loading="lazy" src="assets/images/soselab-2013.jpg" />
+                        <figcaption>2013 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2012 合照" loading="lazy" src="assets/images/soselab-2012.jpg" />
+                        <figcaption>2012 SOSELab</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 2011 合照" loading="lazy" src="assets/images/soselab-2011.jpg" />
+                        <figcaption>2011 SOSELab</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><a class="brand footer-brand" href="index.html"><span
+                        class="brand-mark"><span>S</span></span><span><strong>SOSELab</strong><small>National Taiwan
+                            Ocean University</small></span></a>
+                <p>服務導向軟體工程實驗室<br />國立臺灣海洋大學資訊工程學系</p>
+            </div>
+            <div>
+                <h3>快速連結</h3>
+                <div class="footer-links"><a href="director.html">主持人</a><a href="publications.html">研究成果</a><a
+                        href="people.html">實驗室成員</a><a href="projects.html">大學專題</a><a href="resources.html">研究資源</a>
+                </div>
+            </div>
+            <div>
+                <h3>聯絡資訊</h3>
+                <p>基隆市北寧路 2 號<br />電綜大樓 804 室</p><a href="mailto:albert@ntou.edu.tw">albert@ntou.edu.tw</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/site.js"></script>
+</body>
+
+</html>

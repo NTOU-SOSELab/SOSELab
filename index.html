@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>首頁｜SOSELab</title>
+    <meta content="SOSELab 服務導向軟體工程實驗室" name="description" />
+    <meta content="#004f7c" name="theme-color" />
+    <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/css/site.css" rel="stylesheet" />
+    <link href="en/index.html" hreflang="en" rel="alternate" />
+    <style>
+        /* Keep recent activity photos visually consistent without modifying source files. Using a 3:2 presentation ratio. */
+        .gallery figure {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery figure img {
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .gallery figcaption {
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body class="home-page">
+    <a class="skip-link" href="#main">跳至主要內容</a>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a aria-label="SOSELab 首頁" class="brand" href="index.html">
+                <span class="brand-mark"><span>S</span></span>
+                <span><strong>SOSELab</strong><small>Service-Oriented Software Engineering Lab · NTOU</small></span>
+            </a>
+            <nav aria-label="主要導覽" class="desktop-nav"><a class="nav-link active" href="index.html">首頁</a><a
+                    class="nav-link" href="director.html">主持人</a><a class="nav-link" href="publications.html">研究成果</a><a
+                    class="nav-link" href="people.html">實驗室成員</a><a class="nav-link" href="projects.html">大學專題</a><a
+                    class="nav-link" href="resources.html">研究資源</a></nav>
+            <div class="header-actions"><a aria-label="Switch to English" class="lang-switch" href="en/index.html"
+                    lang="en">EN</a>
+                <button aria-label="切換深色模式" class="icon-btn" data-theme-toggle=""><svg aria-hidden="true" class="icon"
+                        fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" width="22">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                    </svg></button>
+                <button aria-expanded="false" aria-label="開啟選單" class="icon-btn mobile-menu-btn"
+                    data-menu-toggle=""><svg aria-hidden="true" class="icon" fill="none" height="22"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        viewbox="0 0 24 24" width="22">
+                        <path d="M4 7h16M4 12h16M4 17h16"></path>
+                    </svg></button>
+            </div>
+        </div>
+        <nav aria-label="行動版導覽" class="mobile-nav" data-mobile-nav=""><a class="nav-link active"
+                href="index.html">首頁</a><a class="nav-link" href="director.html">主持人</a><a class="nav-link"
+                href="publications.html">研究成果</a><a class="nav-link" href="people.html">實驗室成員</a><a class="nav-link"
+                href="projects.html">大學專題</a><a class="nav-link" href="resources.html">研究資源</a></nav>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <div><span class="eyebrow">國立臺灣海洋大學資訊工程學系</span>
+                    <h1>服務導向軟體工程實驗室</h1>
+                    <p class="lead">本實驗室致力於軟體工程技術的落實，並研發服務導向架構(Service-Oriented Architecture)與服務運算(Service
+                        Computing)相關技術與應用。</p>
+                    <div class="actions"><a class="btn btn-primary" href="publications.html">探索研究成果 <svg
+                                aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                width="18">
+                                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                            </svg></a><a class="btn btn-secondary" href="director.html">認識實驗室主持人</a></div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Research Areas</div>
+                        <h2>研究方向</h2>
+                    </div>
+                    <p>從Web服務探索、組合與可用性，延伸至微服務遷移、測試、監控，以及對話機器人、生成式AI輔助軟體工程。</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                            </svg></div>
+                        <h3>微服務監控與可觀測性</h3>
+                        <p>Microservice Monitoring &amp; Observability</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"></path>
+                            </svg></div>
+                        <h3>微服務測試</h3>
+                        <p>Microservice Testing</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" class="icon" fill="none" height="22" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"
+                                width="22">
+                                <rect x="2.5" y="6" width="6" height="12" rx="1.5"></rect>
+                                <path d="M9 12h5"></path>
+                                <path d="m11.5 9.5 2.5 2.5-2.5 2.5"></path>
+                                <rect x="16" y="3" width="5.5" height="4.5" rx="1"></rect>
+                                <rect x="16" y="9.75" width="5.5" height="4.5" rx="1"></rect>
+                                <rect x="16" y="16.5" width="5.5" height="4.5" rx="1"></rect>
+                            </svg>
+                        </div>
+                        <h3>軟體架構遷移</h3>
+                        <p>Software Architecture Migration</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg></div>
+                        <h3>對話機器人應用架構</h3>
+                        <p>Chatbot Application Architecture</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" class="icon" fill="none" height="22" width="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+
+                                <!-- DevOps infinity -->
+                                <path d="M7.5 8.5c-2.5 0-4.5 1.6-4.5 3.5s2 3.5 4.5 3.5
+                                        c3.5 0 5.5-7 9-7
+                                        2.5 0 4.5 1.6 4.5 3.5s-2 3.5-4.5 3.5
+                                        c-3.5 0-5.5-7-9-7Z">
+                                </path>
+
+                                <!-- AI spark -->
+                                <path d="M18 3v3"></path>
+                                <path d="M16.5 4.5h3"></path>
+                            </svg>
+                        </div>
+
+                        <h3>AI增強DevOps機制</h3>
+                        <p>AI-Augmented DevOps</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <circle cx="11" cy="11" r="7"></circle>
+                                <path d="m20 20-4-4"></path>
+                            </svg></div>
+                        <h3>Web服務檢索與推薦</h3>
+                        <p>Web Service Discovery &amp; Recommendation</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"></path>
+                            </svg></div>
+                        <h3>Web服務組合與混搭</h3>
+                        <p>Service Composition &amp; Mashup</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon"><svg aria-hidden="true" class="icon" fill="none" height="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" width="22">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                            </svg></div>
+                        <h3>開放資料與語意網路</h3>
+                        <p>Open Data &amp; Semantic Web</p>
+                    </article>
+                    <article class="card research-card reveal">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" class="icon" fill="none" height="22" width="22"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+
+                                <!-- 醫療十字 -->
+                                <path d="M7 3h4v4h4v4h-4v4H7v-4H3V7h4V3Z"></path>
+
+                                <!-- 資料互通 -->
+                                <circle cx="18" cy="15" r="2"></circle>
+                                <circle cx="18" cy="21" r="2"></circle>
+                                <path d="M15 17h1"></path>
+                                <path d="M18 17v2"></path>
+                            </svg>
+                        </div>
+                        <h3>醫療資訊互通性</h3>
+                        <p>Healthcare Interoperability &amp; FHIR</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container feature-panel">
+                <div><img alt="SOSELab 研究關鍵字文字雲" src="assets/images/wordcloud.png" /></div>
+                <div>
+                    <div class="kicker">Our Focus</div>
+                    <h2 class="page-title">研究主題與技術</h2>
+                    <p class="lead">實驗室研究橫跨微服務架構、Kubernetes、服務測試、ChatOps、Web API、開放資料與智慧化軟體工程，並透過論文、系統原型與學生專題落實。</p>
+                    <div class="tag-list"><span class="tag">Microservices</span><span class="tag">Kubernetes</span><span
+                            class="tag">Software Testing</span><span class="tag">ChatOps</span><span class="tag">LLM for
+                            SE</span><span class="tag">Web APIs</span></div>
+                    <div class="actions"><a class="btn btn-primary" href="publication.html">查看研究成果 <svg
+                                aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                width="18">
+                                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                            </svg></a>
+                        <a class="btn btn-primary" href="projects.html">查看學生專題 <svg aria-hidden="true" class="icon"
+                                fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18">
+                                <path d="M5 12h14m-5-5 5 5-5 5"></path>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <div class="kicker">Recent Photos</div>
+                        <h2>近期活動照片</h2>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <figure><img alt="SOSELab 2026 實驗室合照" loading="lazy" src="assets/images/soselab-2026.jpg" />
+                        <figcaption>2026 SOSELab 合照</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 參與 AsianPLoP 2026 研討會合照" loading="lazy"
+                            src="assets/images/soselab-2026-asianplop.jpg" />
+                        <figcaption>AsianPLoP 2026</figcaption>
+                    </figure>
+                    <figure><img alt="SOSELab 參與 AROB 30th 2025 研討會合照" loading="lazy"
+                            src="assets/images/soselab-2025-arob.jpeg" />
+                        <figcaption>AROB 30th 2025</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><a class="brand footer-brand" href="index.html"><span
+                        class="brand-mark"><span>S</span></span><span><strong>SOSELab</strong><small>National Taiwan
+                            Ocean University</small></span></a>
+                <p>服務導向軟體工程實驗室<br />國立臺灣海洋大學資訊工程學系</p>
+            </div>
+            <div>
+                <h3>快速連結</h3>
+                <div class="footer-links"><a href="director.html">主持人</a><a href="publications.html">研究成果</a><a
+                        href="people.html">實驗室成員</a><a href="projects.html">大學專題</a><a href="resources.html">研究資源</a>
+                </div>
+            </div>
+            <div>
+                <h3>聯絡資訊</h3>
+                <p>基隆市北寧路 2 號<br />電綜大樓 804 室</p><a href="mailto:albert@ntou.edu.tw">albert@ntou.edu.tw</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/site.js"></script>
+</body>
+
+</html>
